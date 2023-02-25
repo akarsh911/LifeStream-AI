@@ -5,9 +5,14 @@ html {
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
-    background-image: url("../media/backgroundImage.jpg");
+   
+   background-image: url();
+   
+   position: fixed;
+   
+
+   
+  
 }
 
 html,
