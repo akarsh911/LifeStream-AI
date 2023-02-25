@@ -4,7 +4,7 @@ require_once($_SERVER['DOCUMENT_ROOT'] . '/php/database_set_data.php');
 
 if (isset($_GET["group"])) {
     if ($_GET["group"] != "") {
-        $group = trim($_GET["group"], '\'"');
+        $group = $_GET["group"];
         $resp = get_donors_filter($group);
         echo $resp;
     } else {

@@ -21,3 +21,5 @@ $doctors=json_encode($doctors);
 $hospital = json_encode($hospital);
 echo $doctors;
 echo $hospital;
+echo "<script> localStorage.setItem('doctors_assigned_data', `" . $doctors . "`);</script>";
+echo "<script> localStorage.setItem('hospital_assigned_data', `" . $hospital . "`);</script>";

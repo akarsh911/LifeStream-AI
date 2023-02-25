@@ -22,3 +22,5 @@ $blood = json_encode($blood);
 $hospital = json_encode($hospital);
 echo $blood;
 echo $hospital;
+echo "<script> localStorage.setItem('blood_inventory', `" . $blood. "`);</script>";
+echo "<script> localStorage.setItem('hospital_blood_distribution', `" . $hospital . "`);</script>";
