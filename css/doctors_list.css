@@ -56,3 +56,8 @@ padding-right: 2%;
     justify-content: space-around;
 
   }
+  img{
+    height: 100%;
+    width: auto;
+    max-height: 250px;
+  }

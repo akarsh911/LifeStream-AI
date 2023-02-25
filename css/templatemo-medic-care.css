@@ -11,9 +11,9 @@ https://templatemo.com/tm-566-medic-care
 -----------------------------------------*/
 :root {
   --white-color:                  #FFFFFF;
-  --primary-color:                #247cff;
+  --primary-color:                #ff2424;
   --section-bg-color:             #F9F9F9;
-  --dark-color:                   #000000;
+  --dark-color:                   #010f75;
   --title-color:                  #565758;
   --p-color:                      #717275;
   --border-color:                 #eaeaea;
@@ -266,11 +266,12 @@ strong {
 
 .heroText {
   background: var(--white-color);
+  border-top-left-radius: 10%;
   position: absolute;
   z-index: 2;
   bottom: 0;
   right: 0;
-  padding: 1.5rem 2.5rem;
+  padding: 1.75rem 2.75rem;
   width: 50%;
 }
 
@@ -312,7 +313,7 @@ strong {
 }
 
 .navbar-brand {
-  color: var(--primary-color);
+  color: red;
   font-size: var(--h5-font-size);
   font-weight: var(--font-weight-bold);
   margin: 0 30px;
@@ -369,13 +370,7 @@ strong {
   background: transparent;
 }
 
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
-.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-  transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
-  top: 0;
-}
+
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   transform: rotate(45deg);

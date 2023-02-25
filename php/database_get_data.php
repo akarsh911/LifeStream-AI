@@ -97,7 +97,7 @@ function get_doctors()
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "name" => $row["name"], "ph_no" =>   $row["ph_no"],
-                "email" => $row["email"], "hospital_id" => $row["hospital_id"]
+                "email" => $row["email"], "hospital_id" => $row["hospital_id"], "url" => $row["url"]
             );
             $supr_arr[$c++] = $arr;
         }
@@ -120,7 +120,7 @@ function get_hospitals()
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "s_no" => $row["s_no"], "name" => $row["name"], "patients" =>   $row["patients"],
-                "doctors" => $row["doctors"], "ph_no" => $row["ph_no"]
+                "doctors" => $row["doctors"], "ph_no" => $row["ph_no"], "url" => $row["url"]
             );
             $patients += $row["patients"];
             $supr_arr[$c++] = $arr;

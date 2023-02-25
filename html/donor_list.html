@@ -7,7 +7,13 @@
 </head>
 
 <body>
-    <script src="../js/donor_list.js" ></script>
+    <script>
+        $(function () {
+            $("#header").load("../html/header.html");
+        }); 
+    </script>
+    <div id="header"></div>
+    <script src="../js/donor_list.js"></script>
     <div class="dropdown">
         <label id="lblSelect">
             <select id="selectPointOfInterest" title="Select points of interest nearby" onchange="filter()">
@@ -35,7 +41,7 @@
                 <th>Times Donated</th>
                 <th>Might Donate</th>
             </tr>
-           
+
         </table>
     </div>
 </body>
