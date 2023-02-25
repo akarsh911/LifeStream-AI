@@ -11,11 +11,11 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    box-shadow: 2px 3px rgba(4, 4, 4, 0.571);
+    box-shadow: 2px 3px rgba(166, 166, 166, 0.571);
     background-color: #fffefc;
     backdrop-filter: blur(15px);
     padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-bottom: 5vh;
     padding-left: 5vw;
     padding-right: 5vw;
     z-index: 5;
@@ -163,14 +163,14 @@ h1 {
     display: flex;
     align-items: center;
     padding-bottom: 1vh;
-    margin-left: 0%;
+    margin-left:-20px;
    font-weight: bold;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: normal;
     justify-content: space-between;
     align-items: center;
-    background-color: #ebde66;
+    background-color: #ffffff;
     
 }
 
@@ -192,10 +192,196 @@ h1 {
     display: flex;
     align-items: center;
 }
+button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    touch-action: manipulation;
+    padding-left: 1vh;
+   }
+   
+   .shadow {
+    position: absolute;
+    padding-left: 1vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0, 0%, 100%);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   .edge {
+    position: absolute;
+    padding-left: 1vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(
+       to left,
+       hsl(0, 0%, 100%) 0%,
+       hsl(0, 1%, 86%) 8%,
+       hsl(0, 0%, 94%) 92%,
+       hsl(0, 3%, 81%) 100%
+     );
+   }
+   
+   .front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(213, 90%, 42%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform
+       600ms
+       cubic-bezier(.3, .7, .4, 1);
+   }
+   
+   button:hover {
+    filter: brightness(110%);
+   }
+   
+   button:hover .front {
+    transform: translateY(-6px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+   }
+   
+   button:hover .shadow {
+    transform: translateY(4px);
+    transition: transform
+       250ms
+       cubic-bezier(.3, .7, .4, 1.5);
+   }
+   
+   button:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+   }
+   
+   button:focus:not(:focus-visible) {
+    outline: none;
+   }
 
 #user_name_topbar {
     padding-left: 5px;
 }
+.fancy {
+    
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: ;
+    outline: none;
+    overflow: visible;
+    padding: 1vh 2vh 1vh 3vh;
+    position:static;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+   }
+   
+
+   
+   .fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+   
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+   }
+   
+   .fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy:hover {
+    color: white;
+    background: rgb(0, 0, 0);
+   }
+   
+   .fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+   }
+   
+   .fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+   }
+   
+   .fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+   }
+   
+   .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+   }
 
 
 @media screen and (min-width:400px) and (max-width:700px) {
