@@ -158,11 +158,11 @@ h1 {
 
 .container {
     display: flex;
-    padding-top: 14vh;
+    padding-top: 10vh;
     width: 100vw;
     display: flex;
     align-items: center;
-    padding-bottom: 1vh;
+    padding-bottom: 0.5vh;
     margin-left: 0%;
     font-weight: bold;
     flex-direction: row;
@@ -170,7 +170,11 @@ h1 {
     align-content: normal;
     justify-content: space-between;
     align-items: center;
-    background-color: #ebde66;
+    background-color: #8787851d;
+}
+
+.container a {
+    color: black;
 }
 
 .left_align {
