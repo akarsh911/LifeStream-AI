@@ -166,6 +166,8 @@ h1 {
     display: flex;
     align-items: center;
     padding-bottom: 0.5vh;
+    object-fit: scale-down;
+    
     margin-left: 0%;
     font-weight: bold;
     flex-direction: row;
@@ -182,7 +184,10 @@ h1 {
 }
 
 .container69 a:hover {
-    color: #cb9999;
+    color: #ffffff;
+    background-color: black;
+    border-width:medium;
+    border: ;
 }
 
 .left_align {
