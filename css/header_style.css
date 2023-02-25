@@ -1,6 +1,7 @@
 body {
     display: block;
     margin: 0px;
+
 }
 
 .top_bar {
@@ -165,6 +166,8 @@ h1 {
     display: flex;
     align-items: center;
     padding-bottom: 0.5vh;
+    object-fit: scale-down;
+
     margin-left: 0%;
     font-weight: bold;
     flex-direction: row;
@@ -175,13 +178,15 @@ h1 {
     background-color: #8787851d;
 }
 
-.container a {
+.container69 a {
     text-decoration: none;
     color: black;
 }
 
-.container a:hover {
-    color: #cb9999;
+.container69 a:hover {
+    color: #ffffff;
+    background-color: black;
+    border-width: medium;
 }
 
 .left_align {
