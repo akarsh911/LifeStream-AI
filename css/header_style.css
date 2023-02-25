@@ -139,7 +139,7 @@ h1 {
 }
 
 .community_btn:hover {
-    background-color:#cb9999;
+    background-color: #cb9999;
     ;
     border: #106409;
     cursor: pointer;
@@ -147,13 +147,12 @@ h1 {
 
 .stock_btn:hover {
     background-color: #cb9999;
-    );
     border: #636804;
     cursor: pointer;
 }
 
 .expense_btn:hover {
-    background-color:#cb9999;
+    background-color: #cb9999;
     ;
     border: #cb9999;
     cursor: pointer;
@@ -180,7 +179,8 @@ h1 {
     text-decoration: none;
     color: black;
 }
-.container a:hover{
+
+.container a:hover {
     color: #cb9999;
 }
 
