@@ -31,3 +31,7 @@ $.ajax(
             console.log("stcks=" + JSON.stringify(e));
         }
     });
+function filter()
+{
+    
+}
