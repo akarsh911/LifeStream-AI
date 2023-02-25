@@ -127,32 +127,35 @@ h1 {
 }
 
 .log_in_bt:hover {
-    background-color: rgb(235, 222, 102);
+    background-color: #cb9999;
     border: #106409;
     cursor: pointer;
 }
 
 .register:hover {
-    background-color: rgb(235, 222, 102);
+    background-color: #cb9999;
     border: #106409;
     cursor: pointer;
 }
 
 .community_btn:hover {
-    background-color: rgb(235, 222, 102);
+    background-color:#cb9999;
+    ;
     border: #106409;
     cursor: pointer;
 }
 
 .stock_btn:hover {
-    background-color: rgb(235, 222, 102);
+    background-color: #cb9999;
+    );
     border: #636804;
     cursor: pointer;
 }
 
 .expense_btn:hover {
-    background-color: rgb(235, 222, 102);
-    border: #636804;
+    background-color:#cb9999;
+    ;
+    border: #cb9999;
     cursor: pointer;
 }
 
