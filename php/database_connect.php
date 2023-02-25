@@ -55,9 +55,42 @@ if ($conn->query($sql) === TRUE) {
         s_no INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(30) NOT NULL,
         email VARCHAR(250) NOT NULL,
-        doctors VARCHAR(30) NOT NULL,
         ph_no VARCHAR(30) NOT NULL,
         hospital_id VARCHAR(30) NOT NULL
+    )";
+    if ($conn->query($sql) === TRUE) {
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
+    $sql = "CREATE TABLE IF NOT EXISTS blood_distribution (
+        s_no INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(30) NOT NULL,
+        population VARCHAR(30) NOT NULL,
+        OP VARCHAR(30) NOT NULL,
+        OM VARCHAR(30) NOT NULL,
+        BP VARCHAR(30) NOT NULL,
+        BM VARCHAR(30) NOT NULL,
+        AP VARCHAR(30) NOT NULL,
+        AM VARCHAR(30) NOT NULL,
+        ABP VARCHAR(30) NOT NULL,
+        ABM VARCHAR(30) NOT NULL
+    )";
+    if ($conn->query($sql) === TRUE) {
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
+    $sql = "CREATE TABLE IF NOT EXISTS blood_inventory (
+        s_no INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(30) NOT NULL,
+        population VARCHAR(30) NOT NULL,
+        OP VARCHAR(30) NOT NULL,
+        OM VARCHAR(30) NOT NULL,
+        BP VARCHAR(30) NOT NULL,
+        BM VARCHAR(30) NOT NULL,
+        AP VARCHAR(30) NOT NULL,
+        AM VARCHAR(30) NOT NULL,
+        ABP VARCHAR(30) NOT NULL,
+        ABM VARCHAR(30) NOT NULL
     )";
     if ($conn->query($sql) === TRUE) {
     } else {
