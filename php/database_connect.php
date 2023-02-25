@@ -100,8 +100,7 @@ if ($conn->query($sql) === TRUE) {
         s_no INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         van_number VARCHAR(30) NOT NULL,
         lat VARCHAR(30) NOT NULL,
-        long VARCHAR(30) NOT NULL
-        
+        long VARCHAR(30) NOT NULL 
     )";
     if ($conn->query($sql) === TRUE) {
     } else {
