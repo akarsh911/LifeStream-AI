@@ -7,11 +7,11 @@
 </head>
 
 <body>
-    <script src="../js/donor_list.js" onclick="filter();"></script>
+    <script src="../js/donor_list.js" ></script>
     <div class="dropdown">
         <label id="lblSelect">
-            <select id="selectPointOfInterest" title="Select points of interest nearby">
-
+            <select id="selectPointOfInterest" title="Select points of interest nearby" onchange="filter()">
+                <option>None</option>
                 <option>A+</option>
                 <option>A-</option>
                 <option>B+</option>
@@ -22,7 +22,6 @@
                 <option>AB-</option>
             </select>
         </label>
-        <button class="subbutton">Submit</button>
     </div>
     <div class="patlist">
         <table id="table_donor">
