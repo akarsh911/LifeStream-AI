@@ -14,14 +14,14 @@ $.ajax(
                     no = "Yes";
                 }
                 let ht = `<tr>
-                <th >`+ (i + 1) + `</th>
-                <th>`+ data3[i].name + `</th>
-                <th>`+ data3[i].blood_group + `</th>
-                <th>`+ data3[i].gender + `</th>
-                <th>`+ data3[i].last_donation_date + `</th>
-                <th>`+ data3[i].ph_no + `</th>
-                <th>`+ data3[i].times_donated + `</th>
-                 <th>`+ no + `</th>
+                <td >`+ (i + 1) + `</td>
+                <td>`+ data3[i].name + `</td>
+                <td>`+ data3[i].blood_group + `</td>
+                <td>`+ data3[i].gender + `</td>
+                <td>`+ data3[i].last_donation_date + `</td>
+                <td>`+ data3[i].ph_no + `</td>
+                <td>`+ data3[i].times_donated + `</td>
+                 <td>`+ no + `</td>
             </tr> `;
                 document.getElementById("table_donor").innerHTML += ht;
             }
