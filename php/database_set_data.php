@@ -4,7 +4,7 @@ function create_user($username, $email, $f_name, $l_name, $ph_no, $psw_hash)
 {
     $username = $email;
     $conn = openCon();
-    $sql = "INSERT INTO users (username,f_name,l_name,email,ph_no,psw_hash,user_state) VALUES ('$username','$f_name','$l_name','$email','$ph_no','$psw_hash','user_first')";
+    $sql = "INSERT INTO students (username,f_name,l_name,email,ph_no,psw_hash,user_state) VALUES ('$username','$f_name','$l_name','$email','$ph_no','$psw_hash','user_first')";
     if ($conn->query($sql) === TRUE) {
         return 1;
     } else {
@@ -15,8 +15,9 @@ function create_user($username, $email, $f_name, $l_name, $ph_no, $psw_hash)
 
 function login($email, $psw_hash)
 {
+    $user_object = new stdClass();
     $conn = openCon();
-    $sql = "SELECT * FROM users WHERE (email='$email' || ph_no='$email') && psw_hash='$psw_hash'";
+    $sql = "SELECT * FROM students WHERE (email='$email' || ph_no='$email') && psw_hash='$psw_hash'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {

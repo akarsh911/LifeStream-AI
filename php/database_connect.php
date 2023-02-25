@@ -25,6 +25,21 @@ if ($conn->query($sql) === TRUE) {
     } else {
         echo "Error creating table: " . $conn->error;
     }
+    $sql = "CREATE TABLE IF NOT EXISTS donors_list (
+        s_no INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(30) NOT NULL,
+        age VARCHAR(30) NOT NULL,
+        blood_group VARCHAR(30) NOT NULL,
+        ph_no VARCHAR(30) NOT NULL,
+        gender VARCHAR(30) NOT NULL,
+        last_donation_date VARCHAR(50) NOT NULL,
+        times_donated INT(3) NOT NULL,
+        probable_donor INT(1) NOT NULL
+    )";
+    if ($conn->query($sql) === TRUE) {
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
 } else {
     echo "Error creating database: " . $conn->error;
 }
