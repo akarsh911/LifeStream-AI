@@ -5,9 +5,14 @@ html {
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
-    background-image: url("../media/backgroundImage.jpg");
+   
+   background-image: url(../media/wp7898008.jpg);
+   
+   position: fixed;
+   
+
+   
+  
 }
 
 html,
