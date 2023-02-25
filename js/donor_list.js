@@ -14,7 +14,7 @@ $.ajax(
                     no = "Yes";
                 }
                 let ht = `<tr>
-                <td >`+ (i + 1) + `</td>
+                <td >`+ (i + 1) + `.</td>
                 <td>`+ data3[i].name + `</td>
                 <td>`+ data3[i].blood_group + `</td>
                 <td>`+ data3[i].gender + `</td>
@@ -22,7 +22,7 @@ $.ajax(
                 <td>`+ data3[i].ph_no + `</td>
                 <td>`+ data3[i].times_donated + `</td>
                  <td>`+ no + `</td>
-            </tr> `;
+            </tr>`;
                 document.getElementById("table_donor").innerHTML += ht;
             }
         },
