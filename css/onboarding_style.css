@@ -1,5 +1,10 @@
 body {
     overflow-x: hidden;
+    background-image: url(../media/2381638.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 
@@ -16,6 +21,7 @@ body {
     border-radius: 15px;
     border-top: 5px solid rgb(212, 17, 17, 0.9);
     padding: 1em;
+    
 }
 
 .form_title {
