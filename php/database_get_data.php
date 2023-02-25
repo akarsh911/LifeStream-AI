@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/php/database_connect.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "../php/database_connect.php");
 function check_user_exists($email)
 {
     $conn = openCon();
