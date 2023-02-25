@@ -97,7 +97,7 @@ function get_doctors()
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "name" => $row["name"], "ph_no" =>   $row["ph_no"],
-                "email" => $row["email"], "hospital_id" => $row["hospital_id"], "gender" => $row["gender"]
+                "email" => $row["email"], "hospital_id" => $row["hospital_id"]
             );
             $supr_arr[$c++] = $arr;
         }
