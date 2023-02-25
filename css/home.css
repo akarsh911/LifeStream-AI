@@ -1,0 +1,205 @@
+.top_bar {
+    min-width: min-content;
+    width: 90vw;
+    height: 12vh;
+    max-height: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 3px rgba(208, 208, 208, 0.571);
+    background-color: #fffefc;
+    backdrop-filter: blur(15px);
+    padding-top: 1vh;
+    padding-bottom: 7vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+
+}
+.upper_dashboard{
+    padding-left:30vh ;
+    padding-top:17vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    padding: 5%;
+    text-align: center;
+    font-size: 50;
+    }
+    
+
+    #slideshow {
+    overflow: hidden;
+    height: 1000px;
+    width: 5000px;
+    margin: 0 auto;
+    }
+    
+   
+    
+    .slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+    }
+    
+   
+    .slide-wrapper {
+    
+    
+    width: calc(900px * 4);
+    
+    animation: slide 10s ease infinite;
+    }
+    
+    
+    .slide:nth-child(1) {
+    background-image:url(../media/R.jpg);
+    }
+    
+    .slide:nth-child(2) {
+    background-image:url(../media/668181-blood-donation-camp-01.jpg) ;
+    }
+    
+    .slide:nth-child(3) {
+    background: ;
+    }
+    
+    .slide:nth-child(4) {
+    background: ;
+    }
+    .fancy {
+ background-color: transparent;
+ border: 2px solid #000;
+ border-radius: 0;
+ box-sizing: border-box;
+ color: #fff;
+ cursor: pointer;
+ display: inline-block;
+ float: right;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ margin: 0;
+ outline: none;
+ overflow: visible;
+ padding: 1.25em 2em;
+ position: relative;
+ text-align: center;
+ text-decoration: none;
+ text-transform: none;
+ transition: all 0.3s ease-in-out;
+ user-select: none;
+ font-size: 13px;
+}
+
+.fancy::before {
+ content: " ";
+ width: 1.5625rem;
+ height: 2px;
+ background: black;
+ top: 50%;
+ left: 1.5em;
+ position: absolute;
+ transform: translateY(-50%);
+ transform-origin: center;
+ transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+ font-size: 1.125em;
+ line-height: 1.33333em;
+ padding-left: 2em;
+ display: block;
+ text-align: left;
+ transition: all 0.3s ease-in-out;
+ text-transform: uppercase;
+ text-decoration: none;
+ color: black;
+}
+
+.fancy .top-key {
+ height: 2px;
+ 
+
+ width: 1rem;
+ top: -2px;
+ 
+ position: absolute;
+ background: #e8e8e8;
+ transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+ height: 2px;
+ width: 1.5625rem;
+ right: 1.875rem;
+ bottom: -2px;
+ position: absolute;
+ background: #e8e8e8;
+ transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+ height: 2px;
+ width: 0.625rem;
+ right: 0.625rem;
+ bottom: -2px;
+ position: absolute;
+ background: #e8e8e8;
+ transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+ color: white;
+ background: black;
+}
+
+.fancy:hover::before {
+ width: 0.9375rem;
+ background: white;
+}
+
+.fancy:hover .text {
+ color: white;
+ padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+ left: -2px;
+ width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+ .fancy:hover .bottom-key-2 {
+ right: 0;
+ width: 0;
+}
+    
+    /* Define the animation
+    for the slideshow */
+    @keyframes slide {
+    
+    /* Calculate the margin-left for
+    each of the slides */
+    20% {
+        margin-left: 0px;
+    }
+    
+    40% {
+        margin-left: calc(-900px * 1);
+    }
+    
+    60% {
+        margin-left: calc(-900px * 2);
+    }
+    
+    80% {
+        margin-left: calc(-900px * 3);
+    }
+    }
+    
