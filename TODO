@@ -1,0 +1,3 @@
+Chat GPT Commands 
+write a php code to generate a table if not exists name donors_list with following parameters s_no(auto Increment), name , ph_no,age,blood_group,gender,last_donation_date,times_daonated,probable_donor
+//doctors_list
