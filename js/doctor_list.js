@@ -1,9 +1,11 @@
 let data3 = JSON.parse(window.localStorage.getItem('doctors_assigned_data'));
 var count = data3.count;
 var da = "";
+var s_no= getParameters();
 for (var i = 0; i < count; i++) {
     var hid=data3[i].hospital_id;
-    
+    if(hid!=s_no)
+    continue;
     let ht = `<div class="card">
     <img src="`+data3[i].url+`" alt="John" style="width:100%">
     <h1>`+data3[i].name+`</h1>
@@ -14,3 +16,14 @@ for (var i = 0; i < count; i++) {
     da += ht;
 }
 document.getElementById("container").innerHTML += da;
+function getParameters() {
+    let urlString = window.location.href;
+    let paramString = urlString.split('?')[1];
+    let params_arr = paramString.split('&');
+    for(let i = 0; i < params_arr.length; i++) {
+        let pair = params_arr[i].split('=');
+        console.log("Key is:" + pair[0]);
+        console.log("Value is:" + pair[1]);
+        return pair[1];
+    }
+}

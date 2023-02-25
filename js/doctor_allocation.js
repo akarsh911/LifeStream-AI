@@ -1,6 +1,7 @@
 let data3 = JSON.parse(window.localStorage.getItem('hospital_assigned_data'));
 var count = data3.count;
 var da = "";
+
 for (var i = 0; i < count; i++) {
 
     let ht = `<div class="card">
