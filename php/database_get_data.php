@@ -183,3 +183,27 @@ function get_blood_inventory()
         return "nf";
     }
 }
+function get_ambulance_location()
+{
+    $conn = openCon();
+    $c = 0;
+    $supr_arr = array();
+    $patients = 0;
+    $sql = "SELECT * FROM  blood_inventory";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $arr = array(
+                "van_number" => $row["van_number"],
+                "lat" => $row["lat"],
+                "long" => $row["long"]
+            );
+            $supr_arr[$c++] = $arr;
+        }
+        $supr_arr["count"] = $c;
+        $json = json_encode($supr_arr);
+        return $json;
+    } else {
+        return "nf";
+    }
+}
