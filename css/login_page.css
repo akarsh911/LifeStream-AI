@@ -5,4 +5,10 @@
 body{
     background-color: rgb(235, 222, 102);
     padding-top: 15vh;
+    background-image: url(../media/2381638.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
 }
