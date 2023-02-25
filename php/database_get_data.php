@@ -111,6 +111,7 @@ function get_hospitals()
 {
     $conn = openCon();
     $c=0; $supr_arr=array();
+    $patients=0;
     $sql = "SELECT * FROM hospitals_list";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
@@ -119,9 +120,11 @@ function get_hospitals()
                 "s_no" => $row["s_no"],"name" => $row["name"], "patients" =>   $row["patients"],
                 "doctors" => $row["doctors"]
             );
+            $patients+=$row["patients"];
             $supr_arr[$c++]=$arr;
         }
         $supr_arr["count"]=$c;
+        $supr_arr["patient_count"]=$patients;
         $json = json_encode($supr_arr);
         return $json;
     } else {
