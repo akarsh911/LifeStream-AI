@@ -84,11 +84,11 @@ img {
 }
 
 .container {
-  width: 60vw;
+  width: 65vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: calc(100vh - 158.4px);
+  height: calc(100vh - 58.4px);
   display: flex;
 
 }
