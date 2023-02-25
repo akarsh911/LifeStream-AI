@@ -127,42 +127,45 @@ h1 {
 }
 
 .log_in_bt:hover {
-    background-color: rgb(235, 222, 102);
+    background-color: #cb9999;
     border: #106409;
     cursor: pointer;
 }
 
 .register:hover {
-    background-color: rgb(235, 222, 102);
+    background-color: #cb9999;
     border: #106409;
     cursor: pointer;
 }
 
 .community_btn:hover {
-    background-color: rgb(235, 222, 102);
+    background-color:#cb9999;
+    ;
     border: #106409;
     cursor: pointer;
 }
 
 .stock_btn:hover {
-    background-color: rgb(235, 222, 102);
+    background-color: #cb9999;
+    );
     border: #636804;
     cursor: pointer;
 }
 
 .expense_btn:hover {
-    background-color: rgb(235, 222, 102);
-    border: #636804;
+    background-color:#cb9999;
+    ;
+    border: #cb9999;
     cursor: pointer;
 }
 
 .container {
     display: flex;
-    padding-top: 14vh;
+    padding-top: 10vh;
     width: 100vw;
     display: flex;
     align-items: center;
-    padding-bottom: 1vh;
+    padding-bottom: 0.5vh;
     margin-left: 0%;
     font-weight: bold;
     flex-direction: row;
@@ -170,7 +173,11 @@ h1 {
     align-content: normal;
     justify-content: space-between;
     align-items: center;
-    background-color: #ebde66;
+    background-color: #8787851d;
+}
+
+.container a {
+    color: black;
 }
 
 .left_align {
