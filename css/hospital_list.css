@@ -1,3 +1,10 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .card {
   width: 190px;
   height: 274px;
@@ -38,15 +45,17 @@ img{
 }
 
 .heading {
-  font-weight: 600;
-  color: rgb(88, 87, 87);
-  padding: 7px;
+    font-weight: 600;
+    color: rgb(88, 87, 87);
+    padding: 7px;
+  }
+  
+  .heading:hover {
+    cursor: pointer;
+  }
+.heading_top{
+    display: flex;
 }
-
-.heading:hover {
-  cursor: pointer;
-}
-
 .author {
   color: gray;
   font-weight: 400;
@@ -68,6 +77,15 @@ img{
 .row-2{
   padding-top: 3%;
 }
+.container{
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: calc(100vh - 58.4px);
+    display: flex;
+
+}
 .box-1{
   padding-right: 2%;
 }
@@ -75,5 +93,5 @@ h1 {
   text-align: center;
   padding-bottom: 0%;
   font-size: 50px;
-  padding-right: 25%;
+ 
 }

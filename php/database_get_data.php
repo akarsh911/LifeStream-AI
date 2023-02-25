@@ -97,7 +97,7 @@ function get_doctors()
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "name" => $row["name"], "ph_no" =>   $row["ph_no"],
-                "email" => $row["email"], "hospital_id" => $row["hospital_id"], "gender" => $row["gender"]
+                "email" => $row["email"], "hospital_id" => $row["hospital_id"]
             );
             $supr_arr[$c++] = $arr;
         }
@@ -120,7 +120,7 @@ function get_hospitals()
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "s_no" => $row["s_no"], "name" => $row["name"], "patients" =>   $row["patients"],
-                "doctors" => $row["doctors"]
+                "doctors" => $row["doctors"], "ph_no" => $row["ph_no"]
             );
             $patients += $row["patients"];
             $supr_arr[$c++] = $arr;
@@ -173,6 +173,30 @@ function get_blood_inventory()
                 "population" => $row["population"], "AP" => $row["AP"], "AM" => $row["AM"], "BP" =>   $row["BM"],
                 "OP" => $row["OP"], "OM" => $row["OM"], "ABP" => $row["ABP"],
                 "ABM" => $row["ABM"]
+            );
+            $supr_arr[$c++] = $arr;
+        }
+        $supr_arr["count"] = $c;
+        $json = json_encode($supr_arr);
+        return $json;
+    } else {
+        return "nf";
+    }
+}
+function get_ambulance_location()
+{
+    $conn = openCon();
+    $c = 0;
+    $supr_arr = array();
+    $patients = 0;
+    $sql = "SELECT * FROM  blood_inventory";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $arr = array(
+                "van_number" => $row["van_number"],
+                "lat" => $row["lat"],
+                "long" => $row["long"]
             );
             $supr_arr[$c++] = $arr;
         }
