@@ -8,6 +8,7 @@ $.ajax(
             window.localStorage.setItem('temp_data', JSON.stringify(data));
             let data3 = JSON.parse(window.localStorage.getItem('temp_data'));
             var count = data3.count;
+            var dat = "";
             for (var i = 0; i < count; i++) {
                 var no = "No";
                 if (data3[i].probable_donor == 1) {
@@ -23,15 +24,16 @@ $.ajax(
                 <td>`+ data3[i].times_donated + `</td>
                  <td>`+ no + `</td>
             </tr>`;
-                document.getElementById("table_donor").innerHTML += ht;
+                dat += ht;
+
             }
+            document.getElementById("table_donor").innerHTML+= dat;
         },
         error: function (e) {
             alert('Error in putting data at     : ' + JSON.stringify(e));
             console.log("stcks=" + JSON.stringify(e));
         }
     });
-function filter()
-{
-    
+function filter() {
+
 }
