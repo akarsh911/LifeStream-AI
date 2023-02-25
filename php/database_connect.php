@@ -40,6 +40,29 @@ if ($conn->query($sql) === TRUE) {
     } else {
         echo "Error creating table: " . $conn->error;
     }
+    $sql = "CREATE TABLE IF NOT EXISTS hospitals_list (
+        s_no INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(30) NOT NULL,
+        patients VARCHAR(30) NOT NULL,
+        doctors VARCHAR(30) NOT NULL,
+        ph_no VARCHAR(30) NOT NULL
+    )";
+    if ($conn->query($sql) === TRUE) {
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
+    $sql = "CREATE TABLE IF NOT EXISTS doctors_list (
+        s_no INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(30) NOT NULL,
+        email VARCHAR(250) NOT NULL,
+        doctors VARCHAR(30) NOT NULL,
+        ph_no VARCHAR(30) NOT NULL,
+        hospital_id VARCHAR(30) NOT NULL
+    )";
+    if ($conn->query($sql) === TRUE) {
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
 } else {
     echo "Error creating database: " . $conn->error;
 }
