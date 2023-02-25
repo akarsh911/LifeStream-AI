@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2023 at 08:41 PM
+-- Generation Time: Feb 25, 2023 at 10:02 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,6 +20,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `life_stream_ai`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ambulance_locations`
+--
+
+CREATE TABLE `ambulance_locations` (
+  `s_no` int(6) UNSIGNED NOT NULL,
+  `van_number` varchar(30) NOT NULL,
+  `lat` varchar(30) NOT NULL,
+  `lon` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -216,26 +229,27 @@ INSERT INTO `donors_list` (`s_no`, `name`, `age`, `blood_group`, `ph_no`, `gende
 --
 
 CREATE TABLE `hospitals_list` (
-  `s_no` int(6) UNSIGNED NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `patients` varchar(30) NOT NULL,
-  `doctors` varchar(30) NOT NULL,
-  `ph_no` varchar(30) NOT NULL
+  `s_no` int(11) DEFAULT NULL,
+  `name` varchar(17) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `patients` int(11) DEFAULT NULL,
+  `doctors` int(11) DEFAULT NULL,
+  `ph_no` bigint(20) DEFAULT NULL,
+  `url` varchar(96) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hospitals_list`
 --
 
-INSERT INTO `hospitals_list` (`s_no`, `name`, `patients`, `doctors`, `ph_no`) VALUES
-(1, ' manipal hospital', '100', '4', '8999999999'),
-(2, 'health hospital', '150', '6', '8999999998'),
-(3, 'civil hospital', '100', '4', '8999999997'),
-(4, 'edc hospital', '250', '10', '8999999996'),
-(5, 'fortis hospital', '50', '2', '8999999995'),
-(6, 'bits hospital', '150', '6', '8999999994'),
-(7, 'thapar hospital', '100', '4', '8999999993'),
-(8, 'srm hospital', '200', '8', '8999999992');
+INSERT INTO `hospitals_list` (`s_no`, `name`, `patients`, `doctors`, `ph_no`, `url`) VALUES
+(1, ' manipal hospital', 100, 4, 8999999999, 'https://th.bing.com/th/id/OIP.XDEu0hi2s6A5QX55qGvFYAHaFQ?w=259&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+(2, 'health hospital', 150, 6, 8999999998, 'https://th.bing.com/th/id/OIP.kLYOgCrUX_zEivb_oaN6OgHaE8?w=294&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+(3, 'civil hospital', 100, 4, 8999999997, 'https://th.bing.com/th/id/OIP.JnaehYTPmPP1l7_PlIlLMAHaEK?w=302&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+(4, 'edc hospital', 250, 10, 8999999996, 'https://th.bing.com/th/id/OIP.8eohBuxZXz63gOcEexsLVgHaD2?w=339&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+(5, 'fortis hospital', 50, 2, 8999999995, 'https://th.bing.com/th/id/OIP.5Uy0ZHbYVWm-qmyvBgImvAHaEh?w=304&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+(6, 'bits hospital', 150, 6, 8999999994, 'https://th.bing.com/th/id/OIP.IA1DQSKrDsuWsjDtCOnx0QHaE7?w=261&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+(7, 'thapar hospital', 100, 4, 8999999993, 'https://th.bing.com/th/id/OIP.FgeX9MS5PrNtd0bCNIcPnwHaEP?w=289&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+(8, 'srm hospital', 200, 8, 8999999992, 'https://th.bing.com/th/id/OIP.VOiX_Yxo0yPeOQ_zD9-J-wHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7');
 
 -- --------------------------------------------------------
 
@@ -258,6 +272,12 @@ CREATE TABLE `users` (
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `ambulance_locations`
+--
+ALTER TABLE `ambulance_locations`
+  ADD PRIMARY KEY (`s_no`);
 
 --
 -- Indexes for table `blood_distribution`
@@ -284,12 +304,6 @@ ALTER TABLE `donors_list`
   ADD PRIMARY KEY (`s_no`);
 
 --
--- Indexes for table `hospitals_list`
---
-ALTER TABLE `hospitals_list`
-  ADD PRIMARY KEY (`s_no`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -298,6 +312,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `ambulance_locations`
+--
+ALTER TABLE `ambulance_locations`
+  MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `blood_distribution`
@@ -322,12 +342,6 @@ ALTER TABLE `doctors_list`
 --
 ALTER TABLE `donors_list`
   MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
-
---
--- AUTO_INCREMENT for table `hospitals_list`
---
-ALTER TABLE `hospitals_list`
-  MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`

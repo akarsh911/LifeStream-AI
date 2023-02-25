@@ -45,7 +45,8 @@ if ($conn->query($sql) === TRUE) {
         name VARCHAR(30) NOT NULL,
         patients VARCHAR(30) NOT NULL,
         doctors VARCHAR(30) NOT NULL,
-        ph_no VARCHAR(30) NOT NULL
+        ph_no VARCHAR(30) NOT NULL,
+        url VARCHAR(265) NOT NULL
     )";
     if ($conn->query($sql) === TRUE) {
     } else {
@@ -56,7 +57,8 @@ if ($conn->query($sql) === TRUE) {
         name VARCHAR(30) NOT NULL,
         email VARCHAR(250) NOT NULL,
         ph_no VARCHAR(30) NOT NULL,
-        hospital_id VARCHAR(30) NOT NULL
+        hospital_id VARCHAR(30) NOT NULL,
+         url VARCHAR(265) NOT NULL
     )";
     if ($conn->query($sql) === TRUE) {
     } else {
