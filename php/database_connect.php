@@ -96,9 +96,21 @@ if ($conn->query($sql) === TRUE) {
     } else {
         echo "Error creating table: " . $conn->error;
     }
+    $sql = "CREATE TABLE IF NOT EXISTS ambulance_locations (
+        s_no INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        van_number VARCHAR(30) NOT NULL,
+        lat VARCHAR(30) NOT NULL,
+        long VARCHAR(30) NOT NULL,
+        
+    )";
+    if ($conn->query($sql) === TRUE) {
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
 } else {
     echo "Error creating database: " . $conn->error;
 }
+
 $conn->close();
 function openCon()
 {

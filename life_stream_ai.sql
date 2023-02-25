@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2023 at 06:38 PM
+-- Generation Time: Feb 25, 2023 at 08:41 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -41,6 +41,22 @@ CREATE TABLE `blood_distribution` (
   `ABM` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `blood_distribution`
+--
+
+INSERT INTO `blood_distribution` (`s_no`, `name`, `population`, `OP`, `OM`, `BP`, `BM`, `AP`, `AM`, `ABP`, `ABM`) VALUES
+(1, 'Delhi', '18560000', '7238400', '1670400', '1670400', '371200', '5568000', '1113600', '742400', '185600'),
+(2, 'Sonipat', '7000000', '2730000', '630000', '1750000', '420000', '630000', '140000', '420000', '280000'),
+(3, 'Lucknow', '15000000', '6000000', '1200000', '3000000', '1050000', '1500000', '150000', '1200000', '900000'),
+(4, 'Patiala', '12000000', '4560000', '840000', '4200000', '720000', '720000', '240000', '480000', '240000'),
+(5, 'Panipat', '9000000', '3330000', '810000', '27000000', '540000', '630000', '270000', '630000', '90000'),
+(6, 'Karnal', '10000000', '4800000', '500000', '2000000', '500000', '6000000', '100000', '800000', '700000'),
+(7, 'Ambala', '11000000', '4400000', '770000', '2970000', '660000', '550000', '330000', '1320000', '1100000'),
+(8, 'Rohtak', '10000000', '3500000', '800000', '2800000', '700000', '900000', '100000', '700000', '500000'),
+(9, 'Jalander', '12000000', '4320000', '960000', '3840000', '1080000', '960000', '120000', '360000', '120000'),
+(10, 'Bharadurgarh', '8000000', '2960000', '720000', '2640000', '400000', '800000', '80000', '240000', '160000');
+
 -- --------------------------------------------------------
 
 --
@@ -74,6 +90,52 @@ CREATE TABLE `doctors_list` (
   `ph_no` varchar(30) NOT NULL,
   `hospital_id` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `doctors_list`
+--
+
+INSERT INTO `doctors_list` (`s_no`, `name`, `email`, `ph_no`, `hospital_id`) VALUES
+(1, 'Dr. Emily Johnson', 'jonhson@gmail.com', '7999999999', 'HSPID001'),
+(2, 'Dr. David Lee', 'sophiebrown89@hotmail.com', '7999999998', 'HSPID002'),
+(3, 'Dr. Amanda Rodriguez', 'chris_henry@yahoo.com', '7999999997', 'HSPID003'),
+(4, 'Dr. Michael Chen', 'katie_wong33@gmail.com', '7999999996', 'HSPID004'),
+(5, 'Dr. Sarah Brown', 'tom.jones76@outlook.com', '7999999995', 'HSPID005'),
+(6, 'Dr. Daniel Kim', 'emma.miller_1@yahoo.co.uk', '7999999994', 'HSPID006'),
+(7, 'Dr. Jennifer Davis', 'john.cole32@gmail.com', '7999999993', 'HSPID007'),
+(8, 'Dr. Matthew Green', 'lauren_davies22@icloud.com', '7999999992', 'HSPID008'),
+(9, 'Dr. Elizabeth Carter', 'samantha_baker_87@hotmail.co.uk', '7999999991', 'HSPID009'),
+(10, 'Dr. Christopher Patel', 'mark.johnson99@yahoo.com', '7999999990', 'HSPID010'),
+(11, 'Dr. Samantha White', 'sarah_lee1234@outlook.com', '7999999989', 'HSPID011'),
+(12, 'Dr. Kevin Nguyen', 'david_williams_1985@gmail.com', '7999999988', 'HSPID012'),
+(13, 'Dr. Rachel Taylor', 'amy_thomas12@yahoo.co.uk', '7999999987', 'HSPID013'),
+(14, 'Dr. Brian Thomas', 'peter.evans89@icloud.com', '7999999986', 'HSPID014'),
+(15, 'Dr. Ashley Garcia', 'elizabeth_nguyen23@hotmail.com', '7999999985', 'HSPID015'),
+(16, 'Dr. Jonathan Wong', 'michael_brown_1@yahoo.com', '7999999984', 'HSPID016'),
+(17, 'Dr. Lauren Scott', 'lisa_jones_42@gmail.com', '7999999983', 'HSPID017'),
+(18, 'Dr. Tyler Davis', 'benjamin_smith22@outlook.com', '7999999982', 'HSPID018'),
+(19, 'Dr. Victoria Jackson', 'jenny_clark78@yahoo.co.uk', '7999999981', 'HSPID019'),
+(20, 'Dr. Nicholas Wilson', 'alexander_harris_1@hotmail.co.uk', '7999999980', 'HSPID020'),
+(21, 'Dr. Katherine Jones', 'jessica_tan12@gmail.com', '7999999979', 'HSPID021'),
+(22, 'Dr. Timothy Lee', 'andrew_davis88@yahoo.com', '7999999978', 'HSPID022'),
+(23, 'Dr. Megan Adams', 'olivia_green_1@icloud.com', '7999999977', 'HSPID023'),
+(24, 'Dr. Peter Kim', 'matthew_turner34@hotmail.com', '7999999976', 'HSPID024'),
+(25, 'Dr. Stephanie Martin', 'laura_walker87@yahoo.co.uk', '7999999975', 'HSPID025'),
+(26, 'Dr. James Lee', 'charles_richards_1@gmail.com', '7999999974', 'HSPID026'),
+(27, 'Dr. Jennifer Lee', 'anna_parker99@outlook.com', '7999999973', 'HSPID027'),
+(28, 'Dr. Charles Brown', 'george_morris22@yahoo.com', '7999999972', 'HSPID028'),
+(29, 'Dr. Erica Kim', 'sophia_kim_1@hotmail.com', '7999999971', 'HSPID029'),
+(30, 'Dr. Christopher Lee', 'william_jackson56@yahoo.co.uk', '7999999970', 'HSPID030'),
+(31, 'Dr. Rebecca Johnson', 'emily_adams_1@gmail.com', '7999999969', 'HSPID031'),
+(32, 'Dr. Benjamin Chen', 'daniel_roberts88@outlook.com', '7999999968', 'HSPID032'),
+(33, 'Dr. Maria Rodriguez', 'isabella_liu99@yahoo.com', '7999999967', 'HSPID033'),
+(34, 'Dr. Ryan Smith', 'james_taylor76@hotmail.com', '7999999966', 'HSPID034'),
+(35, 'Dr. Michelle Davis', 'avery_brown_1@yahoo.co.uk', '7999999965', 'HSPID035'),
+(36, 'Dr. Andrew Nguyen', 'ryan_carter_22@gmail.com', '7999999964', 'HSPID036'),
+(37, 'Dr. Jacqueline Lee', 'grace_lee1234@icloud.com', '7999999963', 'HSPID037'),
+(38, 'Dr. Jonathan Green', 'jacob_smith89@yahoo.com', '7999999962', 'HSPID038'),
+(39, 'Dr. Katherine Wilson', 'mia_harris_1@hotmail.com', '7999999961', 'HSPID039'),
+(40, 'Dr. Alexander Lee', 'jackson_kim12@yahoo.co.uk', '7999999960', 'HSPID040');
 
 -- --------------------------------------------------------
 
@@ -241,7 +303,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `blood_distribution`
 --
 ALTER TABLE `blood_distribution`
-  MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `blood_inventory`
@@ -253,7 +315,7 @@ ALTER TABLE `blood_inventory`
 -- AUTO_INCREMENT for table `doctors_list`
 --
 ALTER TABLE `doctors_list`
-  MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `donors_list`
