@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2023 at 10:21 PM
+-- Generation Time: Feb 26, 2023 at 05:25 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -33,6 +33,20 @@ CREATE TABLE `ambulance_locations` (
   `lat` varchar(30) NOT NULL,
   `lon` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `ambulance_locations`
+--
+
+INSERT INTO `ambulance_locations` (`s_no`, `van_number`, `lat`, `lon`) VALUES
+(1, 'PB-11-A-2021', '30.342592', '76.379326'),
+(2, 'PB-11-A-2022', '30.346059', '76.395704'),
+(3, 'PB-11-A-2023', '30.329404', '76.398155'),
+(4, 'PB-11-A-2024', '30.318239', '76.354829'),
+(5, 'PB-11-A-2025', '30.348255', '76.348429'),
+(6, 'PB-11-A-2026', '30.363562', '76.380388'),
+(7, 'PB-11-A-2027', '30.371289', '76.475296'),
+(8, 'PB-11-A-2028', '30.319169', '76.41038');
 
 -- --------------------------------------------------------
 
@@ -89,6 +103,32 @@ CREATE TABLE `blood_inventory` (
   `ABP` varchar(30) NOT NULL,
   `ABM` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blood_logistics`
+--
+
+CREATE TABLE `blood_logistics` (
+  `s_no` int(6) UNSIGNED NOT NULL,
+  `city_from` varchar(30) NOT NULL,
+  `city_to` varchar(30) NOT NULL,
+  `units` varchar(30) NOT NULL,
+  `blood_group` varchar(30) NOT NULL,
+  `prog` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `blood_logistics`
+--
+
+INSERT INTO `blood_logistics` (`s_no`, `city_from`, `city_to`, `units`, `blood_group`, `prog`) VALUES
+(1, 'Delhi', 'Sonipat', '15', 'O+', 'In Transiant'),
+(2, 'Delhi', 'Panipat', '9', 'O-', 'In Transiant'),
+(3, 'Delhi', 'Patiala', '6', 'A+', 'In Transiant'),
+(4, 'Chandigarh', 'Patiala', '10', 'AB-', 'In Transiant'),
+(5, 'Chandigarh', 'Jalandhar', '12', 'B+', 'In Transiant');
 
 -- --------------------------------------------------------
 
@@ -271,6 +311,16 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `f_name`, `l_name`, `username`, `ph_no`, `email`, `psw_hash`, `user_state`, `dashboard_type`) VALUES
+(1, 'Akarsh', 'Srivastava', 'admin', 'admin', 'akarsh91140@gmail.com', 'admin', 0, 0),
+(2, 'Akarsh', 'Srivastava', 'user', 'user', 'akarsh91140@gmail.com', 'user', 2, 0),
+(3, 'Akarsh', 'Srivastava', 'doctor', 'doctor', 'akarsh91140@gmail.com', 'doctor', 3, 0),
+(4, 'Akarsh', 'Srivastava', 'ambulance', 'ambulance', 'akarsh91140@gmail.com', 'ambulance', 1, 0);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -293,6 +343,12 @@ ALTER TABLE `blood_inventory`
   ADD PRIMARY KEY (`s_no`);
 
 --
+-- Indexes for table `blood_logistics`
+--
+ALTER TABLE `blood_logistics`
+  ADD PRIMARY KEY (`s_no`);
+
+--
 -- Indexes for table `donors_list`
 --
 ALTER TABLE `donors_list`
@@ -312,7 +368,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `ambulance_locations`
 --
 ALTER TABLE `ambulance_locations`
-  MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `blood_distribution`
@@ -327,6 +383,12 @@ ALTER TABLE `blood_inventory`
   MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `blood_logistics`
+--
+ALTER TABLE `blood_logistics`
+  MODIFY `s_no` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `donors_list`
 --
 ALTER TABLE `donors_list`
@@ -336,7 +398,7 @@ ALTER TABLE `donors_list`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
