@@ -42,6 +42,8 @@ h2 {
 .container69 {
   padding-left: 80px;
   padding-right: 25px;
+  padding-bottom: 2vh;
+  padding-top: 2.5vh;
 }
 
 .cards {
@@ -105,8 +107,12 @@ h2 {
 h1 {
 
   all: initial;
-  margin-top: 30px;
+  width: 100%;
+  margin-top: 25px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   text-align: center;
-  padding-bottom: 5%;
+  padding-bottom: 25px;
   font-size: 45px;
 }
