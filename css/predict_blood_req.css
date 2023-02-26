@@ -1,81 +1,79 @@
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    padding-right: 20%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-  .container{
-    padding-right: 0%;
-    float: center;
-  }
-  .card {
-    width: 300px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;    
-  }
-  
-  .header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 18px;
-  }
-  
-  .body {
-    padding: 20px;
-  }
-  
-  .skill {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .skill-name {
-    width: 120px;
-    font-size: 16px;
-  }
-  
-  .skill-level {
-    width: 160px;
-    height: 10px;
-    background-color: #eee;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-left: 20px;
-  }
-  
-  .skill-percent {
-    background-color: #333;
-    height: 100%;
-  }
-  
-  .skill-percent-number {
-    margin-left: 20px;
-    font-size: 16px;
-  }
-  .container{
-    padding-top: 5%;
-    padding-left: 5%;
-    display: flex;width: 70vw;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: flex-end;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: calc(100% - 500px);
+  padding-right: 20%;
+}
 
-  
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.container {
+  padding-right: 0%;
+  float: center;
+}
+
+.card {
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.body {
+  padding: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  width: 120px;
+  font-size: 16px;
+}
+
+.skill-level {
+  width: 160px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.skill-percent {
+  background-color: #333;
+  height: 100%;
+}
+
+.skill-percent-number {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.container {
+  padding-top: 5%;
+
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+}
