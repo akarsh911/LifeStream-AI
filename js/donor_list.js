@@ -36,15 +36,16 @@ $.ajax(
     });
 function filter() {
     var da = ` <tr>
-    <th>Sr.no</th>
-    <th>Name</th>
-    <th>Blood Group</th>
-    <th>Gender</th>
-    <th>Last Donation</th>
-    <th>Contact Number</th>
-    <th>Times Donated</th>
-    <th>Might Donate</th>
-</tr>`;
+                <th>Sr.no</th>
+                <th>Name</th>
+                <th>Blood Group</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Last Donation</th>
+                <th>Contact Number</th>
+                <th>Times Donated</th>
+                <th>Can Donate</th>
+            </tr>`;
     var btype = document.getElementById("selectPointOfInterest").value;
     $.ajax(
         {
