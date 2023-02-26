@@ -1,91 +1,134 @@
-select#selectPointOfInterest
-{
-   width                    : 185pt;
-   height                   : 40pt;
-   line-height              : 40pt;
-   padding-right            : 20pt;
-   text-indent              : 4pt;
-   text-align               : left;
-   vertical-align           : middle;
-   box-shadow               : inset 0 0 3px #606060;
-   border                   : 1px solid #acacac;
-   -moz-border-radius       : 6px;
-   -webkit-border-radius    : 6px;
-   border-radius            : 6px;
-   -webkit-appearance       : none;
-   -moz-appearance          : none;
-   appearance               : none;  /*IMPORTANT*/
-   font-family              : Arial,  Calibri, Tahoma, Verdana;
-   font-size                : 18pt;
-   font-weight              : 500;
-   color                    : #0b0b10;
-   cursor                   : pointer;
-   outline                  : none;
+.container69 {
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
-select#selectPointOfInterest::-ms-expand {display: none;} /*FOR IE*/
-select#selectPointOfInterest option
-{
-    padding             : 4px 10px 4px 10px;
-    font-size           : 11pt;
-    font-weight         : normal;
+
+select#selectPointOfInterest {
+  width: 185pt;
+  height: 40pt;
+  line-height: 40pt;
+  padding-right: 20pt;
+  text-indent: 4pt;
+  text-align: left;
+  vertical-align: middle;
+  box-shadow: inset 0 0 3px #606060;
+  border: 1px solid #acacac;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /*IMPORTANT*/
+  font-family: Arial, Calibri, Tahoma, Verdana;
+  font-size: 18pt;
+  font-weight: 500;
+  color: #0b0b10;
+  cursor: pointer;
+  outline: none;
 }
-select#selectPointOfInterest option[selected]{ font-weight:bold}
-select#selectPointOfInterest option:nth-child(even) { background-color:#f5f5f5; }
-select#selectPointOfInterest:hover {font-weight: 700;}
-select#selectPointOfInterest:focus {box-shadow: inset 0 0 5px #000099; font-weight: 600;}
+
+select#selectPointOfInterest::-ms-expand {
+  display: none;
+}
+
+/*FOR IE*/
+select#selectPointOfInterest option {
+  padding: 4px 10px 4px 10px;
+  font-size: 11pt;
+  font-weight: normal;
+}
+
+select#selectPointOfInterest option[selected] {
+  font-weight: bold
+}
+
+select#selectPointOfInterest option:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+select#selectPointOfInterest:hover {
+  font-weight: 700;
+}
+
+select#selectPointOfInterest:focus {
+  box-shadow: inset 0 0 5px #000099;
+  font-weight: 600;
+}
 
 /*LABEL FOR SELECT*/
-label#lblSelect{ position: relative; display: inline-block;}
+label#lblSelect {
+  position: relative;
+  display: inline-block;
+}
+
 /*DOWNWARD ARROW (25bc)*/
-label#lblSelect::after
-{
-    content                 : "\25bc";
-    position                : absolute;
-    top                     : 0;
-    right                   : 0;
-    bottom                  : 0;
-    width                   : 20pt;
-    line-height             : 40pt;
-    vertical-align          : middle;
-    text-align              : center;
-    background              : #d2afaf;
-    color                   : #fefefe;
-   -moz-border-radius       : 0 6px 6px 0;
-   -webkit-border-radius    : 0 6px 6px 0;
-    border-radius           : 0 6px 6px 0;
-    pointer-events          : none;
+label#lblSelect::after {
+  content: "\25bc";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20pt;
+  line-height: 40pt;
+  vertical-align: middle;
+  text-align: center;
+  background: #d2afaf;
+  color: #fefefe;
+  -moz-border-radius: 0 6px 6px 0;
+  -webkit-border-radius: 0 6px 6px 0;
+  border-radius: 0 6px 6px 0;
+  pointer-events: none;
 }
-.dropdown{
-    padding-left: 60%;
-    padding-top: 5%;
+
+.dropdown {
+  padding-left: 60%;
+  padding-top: 5%;
 }
+
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #cb9999;
-  }
-  .patlist{
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 5%;
-  }
-  .subbutton{
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 2%;
-    padding-right: 2%;
-    border-radius:5px;
-    background-color: white;
-    box-shadow : 0 0 3px #606060;
-   
-  }
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #bdbdbd28;
+}
+
+.patlist {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+}
+
+.subbutton {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 3px #606060;
+
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.top_bar {
+  width: 100vw;
+}
+
+ul {
+  padding-left: 35px;
+}
