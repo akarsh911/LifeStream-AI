@@ -191,14 +191,14 @@ function get_ambulance_location()
     $c = 0;
     $supr_arr = array();
     $patients = 0;
-    $sql = "SELECT * FROM  blood_inventory";
+    $sql = "SELECT * FROM  ambulance_locations";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "van_number" => $row["van_number"],
                 "lat" => $row["lat"],
-                "long" => $row["long"]
+                "long" => $row["lon"]
             );
             $supr_arr[$c++] = $arr;
         }
@@ -215,7 +215,7 @@ function get_blood_logicstics()
     $c = 0;
     $supr_arr = array();
     $patients = 0;
-    $sql = "SELECT * FROM  blood_inventory";
+    $sql = "SELECT * FROM  get_blood_logicstics";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
