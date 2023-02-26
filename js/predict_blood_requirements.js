@@ -1,4 +1,4 @@
-let data3 = JSON.parse(window.localStorage.getItem('hospital_assigned_data'));
+let data3 = JSON.parse(window.localStorage.getItem('hospital_blood_distribution'));
 var count = data3.count;
 var da = "";
 
