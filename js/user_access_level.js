@@ -36,6 +36,4 @@ else if (user == 1) {
     document.getElementById("pbr").style.display = "none";
     document.getElementById("doc").style.display = "none";
 }
-else (user == 4) {
 
-}
