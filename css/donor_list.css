@@ -82,8 +82,7 @@ label#lblSelect::after {
 }
 
 .dropdown {
-  padding-left: 60%;
-  padding-top: 5%;
+  padding-left: 70%;
 }
 
 table {
@@ -106,7 +105,7 @@ tr:nth-child(even) {
 .patlist {
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 5%;
+  padding-top: 25px;
 }
 
 .subbutton {
