@@ -75,8 +75,8 @@ table {
     background-color: #cb9999;
   }
   .patlist{
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 5%;
   }
   .subbutton{
@@ -88,4 +88,13 @@ table {
     background-color: white;
     box-shadow : 0 0 3px #606060;
    
+  }
+  body{
+    width: 100vw;
+  }
+  .top_bar{
+    width:100vw;
+  }
+  ul{
+    padding-left: 35px;
   }
