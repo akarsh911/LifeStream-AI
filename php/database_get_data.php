@@ -145,7 +145,8 @@ function get_blood_distribution()
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "name" => $row["name"],
-                "population" => $row["population"], "AP" => $row["AP"], "AM" => $row["AM"], "BP" =>   $row["BM"],
+                "population" => $row["population"], "AP" => $row["AP"], "AM" => $row["AM"], "BP" =>   $row["BP"],
+                "BM" =>   $row["BM"],
                 "OP" => $row["OP"], "OM" => $row["OM"], "ABP" => $row["ABP"],
                 "ABM" => $row["ABM"]
             );
@@ -170,7 +171,8 @@ function get_blood_inventory()
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "name" => $row["name"],
-                "population" => $row["population"], "AP" => $row["AP"], "AM" => $row["AM"], "BP" =>   $row["BM"],
+                "population" => $row["population"], "AP" => $row["AP"], "AM" => $row["AM"], "BP" =>   $row["BP"],
+                "BM" =>   $row["BM"],
                 "OP" => $row["OP"], "OM" => $row["OM"], "ABP" => $row["ABP"],
                 "ABM" => $row["ABM"]
             );
