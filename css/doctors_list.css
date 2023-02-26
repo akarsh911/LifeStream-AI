@@ -10,6 +10,7 @@ padding-left: 2%;
 padding-right: 2%;  
 }
   body{
+    
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -30,12 +31,6 @@ padding-right: 2%;
     cursor: pointer;
     width: 100%;
     font-size: 18px;
-  }
-  
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: black;
   }
   
   button:hover, a:hover {
