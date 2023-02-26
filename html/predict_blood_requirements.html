@@ -1,246 +1,91 @@
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <link rel="stylesheet" href="../css/predict_blood_req.css">
 <script>
   $(function () {
-      $("#header").load("../html/header.html");
+    $("#header").load("../html/header.html");
   }); 
 </script>
 <div id="header"></div>
 <div class="container">
 
-    <table>
-      <tr>
-       <th>Sr.no</th>
-        <th>Name</th>
-        <th>A+</th>
-         <th>A-</th>
-          <th>B+</th>
-           <th>B-</th>
-            <th>AB+</th>
-             <th>AB-</th>
-              <th>O+</th>
-               <th>O-</th>
-                
-      </tr>
-      <tr>
-        <td>1.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-       <td>2.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-       <td>3.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-       <td>4.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-        <td>5.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-       <td>6.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-        <td>7.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-        <td>8.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-        <td>9.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-        <td>10.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-        <td>11.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-        <td>12.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-      <tr>
-        <td>13.</td>
-        <td>Amar hospital</td>
-        <td>345</td>
-        <td>355</td>
-        <td>656</td>
-        <td>675</td>
-        <td>767</td>
-        <td>754</td>
-        <td>544</td>
-        <td>245</td>
-      </tr>
-    </table>
-    <div class="card">
-        <div class="header">Predicted Blood Units</div>
-        <div class="body">
-          <div class="skill">
-            <div class="skill-name">A+</div>
-            <div class="skill-level">
-              <div class="skill-percent" style="width: 90%"></div>
-            </div>
-            <div class="skill-percent-number">90%</div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">A-</div>
-            <div class="skill-level">
-              <div class="skill-percent" style="width: 80%"></div>
-            </div>
-            <div class="skill-percent-number">80%</div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">AB+</div>
-            <div class="skill-level">
-              <div class="skill-percent" style="width: 75%"></div>
-            </div>
-            <div class="skill-percent-number">75%</div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">A+</div>
-            <div class="skill-level">
-              <div class="skill-percent" style="width: 90%"></div>
-            </div>
-            <div class="skill-percent-number">90%</div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">A-</div>
-            <div class="skill-level">
-              <div class="skill-percent" style="width: 80%"></div>
-            </div>
-            <div class="skill-percent-number">80%</div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">AB+</div>
-            <div class="skill-level">
-              <div class="skill-percent" style="width: 75%"></div>
-            </div>
-            <div class="skill-percent-number">75%</div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">A+</div>
-            <div class="skill-level">
-              <div class="skill-percent" style="width: 90%"></div>
-            </div>
-            <div class="skill-percent-number">90%</div>
-          </div>
-          <div class="skill">
-            <div class="skill-name">A-</div>
-            <div class="skill-level">
-              <div class="skill-percent" style="width: 80%"></div>
-            </div>
-            <div class="skill-percent-number">80%</div>
-          </div>
-         
+  <table id="table_predict">
+    <tr>
+      <th>Sr.no</th>
+      <th>Name</th>
+      <th>A+</th>
+      <th>A-</th>
+      <th>B+</th>
+      <th>B-</th>
+      <th>AB+</th>
+      <th>AB-</th>
+      <th>O+</th>
+      <th>O-</th>
+
+    </tr>
+
+  </table>
+  <script src="../js/predict_blood_requirement.js"></script>
+  <div class="card">
+    <div class="header">Predicted Blood Units</div>
+    <div class="body">
+      <div class="skill">
+        <div class="skill-name">A+</div>
+        <div class="skill-level">
+          <div class="skill-percent" style="width: 90%"></div>
         </div>
+        <div class="skill-percent-number">90%</div>
       </div>
-      
+      <div class="skill">
+        <div class="skill-name">A-</div>
+        <div class="skill-level">
+          <div class="skill-percent" style="width: 80%"></div>
+        </div>
+        <div class="skill-percent-number">80%</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">AB+</div>
+        <div class="skill-level">
+          <div class="skill-percent" style="width: 75%"></div>
+        </div>
+        <div class="skill-percent-number">75%</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">A+</div>
+        <div class="skill-level">
+          <div class="skill-percent" style="width: 90%"></div>
+        </div>
+        <div class="skill-percent-number">90%</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">A-</div>
+        <div class="skill-level">
+          <div class="skill-percent" style="width: 80%"></div>
+        </div>
+        <div class="skill-percent-number">80%</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">AB+</div>
+        <div class="skill-level">
+          <div class="skill-percent" style="width: 75%"></div>
+        </div>
+        <div class="skill-percent-number">75%</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">A+</div>
+        <div class="skill-level">
+          <div class="skill-percent" style="width: 90%"></div>
+        </div>
+        <div class="skill-percent-number">90%</div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">A-</div>
+        <div class="skill-level">
+          <div class="skill-percent" style="width: 80%"></div>
+        </div>
+        <div class="skill-percent-number">80%</div>
+      </div>
+
     </div>
+  </div>
+
+</div>

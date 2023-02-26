@@ -1,7 +1,144 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<style>
+    p {
+        width: 80%;
+        padding-left: 10%;
+        align-items: center;
+        align-self: center;
+    }
+
+    h2,
+    h1 {
+        padding-left: 10%;
+    }
+</style>
 <script>
     $(function () {
         $("#header").load("../html/header.html");
     }); 
 </script>
 <div id="header"></div>
+<h1>Blood Donor Prediction Model</h3>
+    <p>The blood donation prediction algorithm is a machine learning model that is designed to predict whether a blood
+        donor
+        is likely to donate blood again in the future. The algorithm takes into account various factors such as the
+        frequency of blood donations, the number of donations made, the age of the donor, and other demographic
+        information.
+    </p>
+
+    <h2>Data Collection and Preparation</h2>
+    <p>The first step in developing the blood donation prediction algorithm is to collect and prepare the data. This
+        involves gathering information about past blood donors, including their donation history, demographics, and
+        other
+        relevant factors. The data is then cleaned and preprocessed to remove any missing values or errors.</p>
+
+    <h2>Feature Selection and Engineering</h2>
+    <p>Next, the algorithm determines which features or variables are most important in predicting future blood
+        donations.
+        This involves analyzing the data to identify which factors are most strongly correlated with future donations.
+        The
+        algorithm may also create new features or variables based on the existing data to improve the accuracy of the
+        model.
+    </p>
+
+    <h2>Model Training and Evaluation</h2>
+    <p>The next step is to train the machine learning model using the prepared data. The model is trained on a subset of
+        the
+        data, known as the training set, and the performance of the model is evaluated using another subset of the data,
+        known as the validation set. The model is optimized to achieve the highest possible accuracy and predictive
+        power.
+    </p>
+
+    <h2>Prediction and Deployment</h2>
+    <p>Finally, the blood donation prediction algorithm is deployed in a real-world setting. Donors can enter their
+        information into the algorithm, which then predicts whether they are likely to donate blood again in the future.
+        This information can be used to target donors with specific messages or incentives to encourage them to continue
+        donating blood.</p>
+
+    <h2>Conclusion</h2>
+    <p>The blood donation prediction algorithm is an important tool for blood donation organizations to increase the
+        number
+        of donors and ensure a steady supply of blood for those in need. By using machine learning to analyze past
+        donation
+        patterns and demographic information, the algorithm can accurately predict which donors are most likely to
+        donate
+        again in the future.</p>
+    <br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+    <h1>Blood Donor Prediction Model using CanvaJS</h1>
+    <canvas id="chart"></canvas>
+    <script>// Data points for the blood donor prediction model
+
+        window.onload = function () {
+            var dataPoints = [
+                { x: 18, y: 0 },
+                { x: 25, y: 1 },
+                { x: 31, y: 1 },
+                { x: 42, y: 0 },
+                { x: 50, y: 0 },
+                { x: 27, y: 1 },
+                { x: 35, y: 0 },
+                { x: 48, y: 0 },
+                { x: 22, y: 1 },
+                { x: 29, y: 1 },
+                { x: 36, y: 0 },
+                { x: 43, y: 0 },
+                { x: 55, y: 0 },
+                { x: 20, y: 1 },
+                { x: 39, y: 0 },
+                { x: 44, y: 0 },
+                { x: 30, y: 1 },
+                { x: 37, y: 0 },
+                { x: 41, y: 0 },
+                { x: 47, y: 0 },
+            ];
+
+            // Logistic regression function
+            function logisticRegression(dataPoints) {
+                var xSum = 0, ySum = 0, xySum = 0, xSquaredSum = 0, n = dataPoints.length;
+
+                for (var i = 0; i < n; i++) {
+                    xSum += dataPoints[i].x;
+                    ySum += dataPoints[i].y;
+                    xySum += (dataPoints[i].x * dataPoints[i].y);
+                    xSquaredSum += (dataPoints[i].x * dataPoints[i].x);
+                }
+
+                var b = (xSquaredSum * ySum - xSum * xySum) / (n * xSquaredSum - xSum * xSum);
+                var a = (ySum - b * xSum) / n;
+
+                return { a: a, b: b };
+            }
+
+            // Calculate the logistic regression line
+            var regression = logisticRegression(dataPoints);
+            var regressionLine = [];
+            regressionLine.push({ x: dataPoints[0].x, y: 1 / (1 + Math.exp(-(regression.a + regression.b * dataPoints[0].x))) });
+            regressionLine.push({ x: dataPoints[dataPoints.length - 1].x, y: 1 / (1 + Math.exp(-(regression.a + regression.b * dataPoints[dataPoints.length - 1].x))) });
+
+            // Create the chart using CanvaJS
+            var chart = new CanvasJS.Chart("chart", {
+                title: {
+                    text: "Blood Donor Prediction Model"
+                },
+                axisX: {
+                    title: "Age"
+                },
+                axisY: {
+                    title: "Eligibility"
+                },
+                data: [
+                    {
+                        type: "scatter",
+                        dataPoints: dataPoints
+                    },
+                    {
+                        type: "line",
+                        dataPoints: regressionLine
+                    }
+                ]
+            });
+            chart.render();
+        }
+    </script>
