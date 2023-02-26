@@ -108,6 +108,18 @@ if ($conn->query($sql) === TRUE) {
     } else {
         echo "Error creating table: " . $conn->error;
     }
+    $sql = "CREATE TABLE IF NOT EXISTS blood_logistics (
+        s_no INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        city_from VARCHAR(30) NOT NULL,
+        city_to VARCHAR(30) NOT NULL,
+        units VARCHAR(30) NOT NULL,
+        blood_group VARCHAR(30) NOT NULL,
+        status VARCHAR(50) NOT NULL, 
+    )";
+    if ($conn->query($sql) === TRUE) {
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
 } else {
     echo "Error creating database: " . $conn->error;
 }
