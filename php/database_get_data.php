@@ -215,13 +215,13 @@ function get_blood_logicstics()
     $c = 0;
     $supr_arr = array();
     $patients = 0;
-    $sql = "SELECT * FROM  get_blood_logicstics";
+    $sql = "SELECT * FROM  blood_logistics";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "city_from" => $row["city_from"],
-                "city_to" => $row["city_to"], "units" => $row["units"], "blood_group" => $row["blood_group"]
+                "city_to" => $row["city_to"], "units" => $row["units"], "blood_group" => $row["blood_group"], "status" => $row["prog"]
             );
             $supr_arr[$c++] = $arr;
         }
