@@ -140,21 +140,25 @@ h1 {
 }
 
 .community_btn:hover {
-    background-color: #cb9999;
-    ;
-    border: #106409;
+    background-color: #000000;
+
+    color: aliceblue;
+    border: rgb(255, 255, 255);
     cursor: pointer;
 }
 
 .stock_btn:hover {
-    background-color: #cb9999;
+    background-color: #000000;
+    color: #fffefc;
     border: #636804;
     cursor: pointer;
 }
 
 .expense_btn:hover {
-    background-color: #cb9999;
-    ;
+    background-color: #000000;
+    color: aliceblue;
+    text-decoration-color: aliceblue;
+
     border: #cb9999;
     cursor: pointer;
 }
@@ -175,18 +179,19 @@ h1 {
     align-content: normal;
     justify-content: space-between;
     align-items: center;
-    background-color: #8787851d;
+    background-color: #000a61f5;
+    color: aliceblue;
 }
 
 .container69 a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .container69 a:hover {
-    color: #ffffff;
-    background-color: black;
-    border-width: medium;
+    color: #ff0000;
+
+
 }
 
 .left_align {
