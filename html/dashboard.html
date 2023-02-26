@@ -18,6 +18,147 @@
     }); 
 </script>
 <div id="header"></div>
+<h1>AI Model to Predict Ambulance Locations</h1>
+  
+  <p>When a traffic accident occurs, getting medical help to the injured parties as quickly as possible is crucial for saving lives. However, ambulance services can be delayed if they don't know the exact location of the accident or if there is traffic congestion on the way.</p>
+  
+  <p>To address this problem, an AI model has been developed to predict the most likely locations where accidents are likely to occur, based on historical accident data. The model uses machine learning algorithms to analyze data such as accident location, time of day, weather, road conditions, and traffic volume to identify patterns and predict where future accidents are most likely to occur.</p>
+  
+  <p>Once the AI model has identified the most likely locations for accidents, it can use this information to predict where ambulance services are most likely to be needed. This enables ambulance services to position themselves in advance in order to respond more quickly to accidents, potentially saving more lives.</p>
+  
+  <p>The AI model can be integrated into existing ambulance dispatch systems to provide real-time predictions of where ambulances should be positioned based on current traffic and accident data. This can help to reduce response times and improve overall emergency medical services.</p>
+
+
+  <head>
+    <title>Regression Curve for AI Model</title>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </head>
+ 
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+  
+    <script>
+      // Generate 40 random data points
+      var dataPoints = [];
+      for (var i = 0; i < 40; i++) {
+        dataPoints.push({
+          x: i + 1,
+          y: Math.floor(Math.random() * 100) + 1
+        });
+      }
+  
+      var chart = new CanvasJS.Chart("chartContainer", {
+        title: {
+          text: "Regression Curve for AI Model"
+        },
+        data: [{
+          type: "line",
+          dataPoints: dataPoints
+        },
+        {
+          type: "line",
+          dataPoints: [
+            { x: 1, y: 10 },
+            { x: 40, y: 80 }
+          ]
+        }]
+      });
+  
+      chart.render();
+    </script>
+ 
+  
+
+
+ <head>
+     <title>Blood Requirement Prediction AI Model</title>
+     <style>
+         .center {
+             text-align: center;
+         }
+     </style>
+ </head>
+
+     <div class="center">
+         <h1>Blood Requirement Prediction AI Model</h1>
+         <p>This AI model uses data on the following factors to predict the blood requirement in an area:</p>
+         <ul>
+             <li>Number of people of each blood group</li>
+             <li>Previous blood demands</li>
+             <li>Medical history of patients</li>
+             <li>Diseases in the area</li>
+         </ul>
+         <p>The model analyzes this data using machine learning algorithms to predict the blood requirement for each blood group in the area, taking into account factors such as population density, age distribution, and disease prevalence.</p>
+     </div>
+ 
+
+ 
+     <div id="chartContainer3" style="height: 370px; width: 100%;"></div>
+     <script>
+        window.onload = function () {
+        
+        var chart = new CanvasJS.Chart("chartContainer3", {
+            animationEnabled: true,
+            title:{
+                text: "AI Accuracy"
+            },
+            axisX: {
+                title:"Model Set"
+            },
+            axisY:{
+                title: "Accuracy (in %)",
+                includeZero: true
+            },
+            data: [{
+                type: "scatter",
+                name: "Model 1",
+                showInLegend: true,
+                dataPoints: [
+                    { x: 1, y: 69 },
+                    { x: 2, y: 85 },
+                    { x: 3, y: 26 },
+                    { x: 4, y: 96 },
+                    { x: 5, y: 56 },
+                    { x: 6, y: 48 },
+                    { x: 7, y: 59 },
+                    { x: 8, y: 99 },
+                    { x: 9, y: 85 },
+                    { x: 10, y: 74 },
+                    { x: 11, y: 45 },
+                    { x: 12, y: 56 },
+                    { x: 13, y: 85 },
+                    { x: 14, y: 67 }
+                ]
+            },
+            {
+                type: "scatter",
+                name: "Model 2",
+                showInLegend: true, 
+                dataPoints: [
+                    { x: 1, y: 85 },
+                    { x: 2, y: 68 },
+                    { x: 3, y: 8 },
+                    { x: 4, y: 48 },
+                    { x: 5, y: 57 },
+                    { x: 6, y: 63 },
+                    { x: 7, y: 47 },
+                    { x: 8, y: 84 },
+                    { x: 9, y: 65 },
+                    { x: 10, y: 28 },
+                    { x: 11, y: 41 },
+                    { x: 12, y: 54 },
+                    { x: 13, y: 81 },
+                    { x: 14, y: 68 }
+                ]
+            }]
+        });
+        chart.render();
+        
+        }
+        </script>
+       </script>
+    
+     
+
 <h1>Blood Donor Prediction Model</h3>
     <p>The blood donation prediction algorithm is a machine learning model that is designed to predict whether a blood
         donor
@@ -64,81 +205,34 @@
         donate
         again in the future.</p>
     <br>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
-    <h1>Blood Donor Prediction Model using CanvaJS</h1>
-    <canvas id="chart"></canvas>
-    <script>// Data points for the blood donor prediction model
-
-        window.onload = function () {
-            var dataPoints = [
-                { x: 18, y: 0 },
-                { x: 25, y: 1 },
-                { x: 31, y: 1 },
-                { x: 42, y: 0 },
-                { x: 50, y: 0 },
-                { x: 27, y: 1 },
-                { x: 35, y: 0 },
-                { x: 48, y: 0 },
-                { x: 22, y: 1 },
-                { x: 29, y: 1 },
-                { x: 36, y: 0 },
-                { x: 43, y: 0 },
-                { x: 55, y: 0 },
-                { x: 20, y: 1 },
-                { x: 39, y: 0 },
-                { x: 44, y: 0 },
-                { x: 30, y: 1 },
-                { x: 37, y: 0 },
-                { x: 41, y: 0 },
-                { x: 47, y: 0 },
-            ];
-
-            // Logistic regression function
-            function logisticRegression(dataPoints) {
-                var xSum = 0, ySum = 0, xySum = 0, xSquaredSum = 0, n = dataPoints.length;
-
-                for (var i = 0; i < n; i++) {
-                    xSum += dataPoints[i].x;
-                    ySum += dataPoints[i].y;
-                    xySum += (dataPoints[i].x * dataPoints[i].y);
-                    xSquaredSum += (dataPoints[i].x * dataPoints[i].x);
-                }
-
-                var b = (xSquaredSum * ySum - xSum * xySum) / (n * xSquaredSum - xSum * xSum);
-                var a = (ySum - b * xSum) / n;
-
-                return { a: a, b: b };
-            }
-
-            // Calculate the logistic regression line
-            var regression = logisticRegression(dataPoints);
-            var regressionLine = [];
-            regressionLine.push({ x: dataPoints[0].x, y: 1 / (1 + Math.exp(-(regression.a + regression.b * dataPoints[0].x))) });
-            regressionLine.push({ x: dataPoints[dataPoints.length - 1].x, y: 1 / (1 + Math.exp(-(regression.a + regression.b * dataPoints[dataPoints.length - 1].x))) });
-
-            // Create the chart using CanvaJS
-            var chart = new CanvasJS.Chart("chart", {
-                title: {
-                    text: "Blood Donor Prediction Model"
-                },
-                axisX: {
-                    title: "Age"
-                },
-                axisY: {
-                    title: "Eligibility"
-                },
-                data: [
-                    {
-                        type: "scatter",
-                        dataPoints: dataPoints
-                    },
-                    {
-                        type: "line",
-                        dataPoints: regressionLine
-                    }
-                ]
-            });
-            chart.render();
+    
+    <head>
+      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </head>
+    
+      <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+    
+      <script>
+        // Generate 10 random data points
+        var dataPoints = [];
+        for (var i = 0; i < 10; i++) {
+          dataPoints.push({
+            x: i + 1,
+            y: Math.floor(Math.random() * 10) + 1
+          });
         }
-    </script>
+    
+        var chart = new CanvasJS.Chart("chartContainer2", {
+          title: {
+            text: "Regression Curve For Possible Donors"
+          },
+          data: [{
+            type: "line",
+            dataPoints: dataPoints
+          }]
+        });
+    
+        chart.render();
+      </script>
+    
+    
