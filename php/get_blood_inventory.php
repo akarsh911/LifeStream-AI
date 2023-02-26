@@ -10,7 +10,8 @@ $c = 0;
 for ($i = 0; $i < $hospital->count; $i++) {
     $dis_ratio = ($hospital->$i->patients) / $pat_no;
     echo json_encode($hospital->$i);
-    $new_arr->OP = round($dis_ratio * $blood[0]->OP);
+    $new_arr = $hospital->$i;
+    $hospital->$i->OP = round($dis_ratio * $blood[0]->OP);
     $new_arr->OM = round($dis_ratio * $blood[0]->OM);
     $new_arr->AP = round($dis_ratio * $blood[0]->AP);
     $new_arr->AM = round($dis_ratio * $blood[0]->AM);
