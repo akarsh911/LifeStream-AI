@@ -71,8 +71,7 @@ tr:nth-child(even) {
 }
 
 .container {
-  padding-top: 5%;
-
+  padding-top: 25px;
   display: flex;
   width: 100vw;
   justify-content: space-around;
