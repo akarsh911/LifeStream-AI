@@ -35,7 +35,7 @@ img {
 
 .category {
   text-transform: uppercase;
-  font-size: 0.7em;
+  font-size: 18px;
   font-weight: 600;
   color: rgb(63, 121, 230);
   padding: 10px 7px 0;
@@ -49,6 +49,7 @@ img {
   font-weight: 600;
   color: rgb(88, 87, 87);
   padding: 7px;
+  font-size: 22px;
 }
 
 .heading:hover {
@@ -64,6 +65,7 @@ img {
   font-weight: 400;
   font-size: 11px;
   padding-top: 20px;
+  font-size: 18px;
 }
 
 .name {
