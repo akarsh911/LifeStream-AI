@@ -120,7 +120,7 @@ function get_hospitals()
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "s_no" => $row["s_no"], "name" => $row["name"], "patients" =>   $row["patients"],
-                "doctors" => $row["doctors"], "ph_no" => $row["ph_no"], "url" => $row["url"]
+                "doctors" => $row["doctors"], "ph_no" => $row["ph_no"], "url" => $row["url"],"OP"=>"0","OM"=>"0","AP"=>"0","AM"=>"0","BP"=>"0","BM"=>"0","ABP"=>"0","ABM"=>"0"
             );
             $patients += $row["patients"];
             $supr_arr[$c++] = $arr;
