@@ -1,6 +1,13 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
 .loader {
     width: 112px;
     height: 112px;
+    display: flex;
   }
   
   .box1,
