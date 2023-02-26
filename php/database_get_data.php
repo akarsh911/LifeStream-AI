@@ -97,7 +97,7 @@ function get_doctors()
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "name" => $row["name"], "ph_no" =>   $row["ph_no"],
-                "email" => $row["email"], "hospital_id" => $row["hospital_id"], "url" => $row["url"], 
+                "email" => $row["email"], "hospital_id" => $row["hospital_id"], "url" => $row["url"],
             );
             $supr_arr[$c++] = $arr;
         }
@@ -120,7 +120,7 @@ function get_hospitals()
         while ($row = $result->fetch_assoc()) {
             $arr = array(
                 "s_no" => $row["s_no"], "name" => $row["name"], "patients" =>   $row["patients"],
-                "doctors" => $row["doctors"], "ph_no" => $row["ph_no"], "url" => $row["url"],"OP"=>"0","OM"=>"0","AP"=>"0","AM"=>"0","BP"=>"0","BM"=>"0","ABP"=>"0","ABM"=>"0"
+                "doctors" => $row["doctors"], "ph_no" => $row["ph_no"], "url" => $row["url"], "OP" => "0", "OM" => "0", "AP" => "0", "AM" => "0", "BP" => "0", "BM" => "0", "ABP" => "0", "ABM" => "0"
             );
             $patients += $row["patients"];
             $supr_arr[$c++] = $arr;
@@ -197,6 +197,29 @@ function get_ambulance_location()
                 "van_number" => $row["van_number"],
                 "lat" => $row["lat"],
                 "long" => $row["long"]
+            );
+            $supr_arr[$c++] = $arr;
+        }
+        $supr_arr["count"] = $c;
+        $json = json_encode($supr_arr);
+        return $json;
+    } else {
+        return "nf";
+    }
+}
+function get_blood_logicstics()
+{
+    $conn = openCon();
+    $c = 0;
+    $supr_arr = array();
+    $patients = 0;
+    $sql = "SELECT * FROM  blood_inventory";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $arr = array(
+                "city_from" => $row["city_from"],
+                "city_to" => $row["city_to"], "units" => $row["units"], "blood_group" => $row["blood_group"]
             );
             $supr_arr[$c++] = $arr;
         }
