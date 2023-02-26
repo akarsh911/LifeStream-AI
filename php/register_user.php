@@ -53,12 +53,12 @@ $vals["ph_no"] = $ph_no_json;
 if (check_ph_no($ph_no) != 1) {
     $err++;
 }
-
+$user_state = $_POST["user_type"];
 
 if ($err == 0) {
 
     $resp = "";
-    if ($resp = create_user($email, $email, $f_name, $l_name, $ph_no, $psw) == 1) {
+    if ($resp = create_user($email, $email, $f_name, $l_name, $ph_no, $psw, $user_state) == 1) {
         echo '<script>alert("id created login now!");</script>';
         echo '<script>window.onload = (event) => {location.replace("/html/login_page.html")};</script>';
         //TODO: redirect to login page with message

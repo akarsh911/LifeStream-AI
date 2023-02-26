@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,6 +63,14 @@
                     </div>
                 </div>
                 <span class="error_msg" id="psw_err_msg"></span><br>
+                <label class="label">User Type:<span class="red_star">*</span></label><br>
+                <div class="field_container">
+                    <div class="input_icons"><i id="user_type" class="fa fa-exclamation-circle err"></i>
+                        <input class="boxes" type="password" placeholder="0->Admin 1->Ambulance 3->doctor 4->user"
+                            name="user_type" id="user_type" required />
+                    </div>
+                </div>
+                <span class="error_msg" id="psw_err_msg"></span><br>
                 <div class="field_container submit">
                     <button type="submit" class="submit_bt">Create Account <i class="fa fa-key"></i></button>
                 </div>
@@ -72,7 +81,7 @@
 <script src="../js/onboarding_js.js"></script>
 </body>
 <style>
-   
+
 </style>
 <script src="../js/onboarding_js.js"></script>
 <!--#include virtual="../html/footer_home_page.html" -->

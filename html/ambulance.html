@@ -5,37 +5,61 @@
     }); 
 </script>
 <div id="header"></div>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<head>
+    <title>Bing Maps Example</title>
+    <meta charset="utf-8" />
+    <script type='text/javascript'
+        src='https://www.bing.com/api/maps/mapcontrol?key=Au3LSzanBLGwhJ0mu3GmwWd-L1UDsSk7iC5QMczU8NxRYIjWJYFBSEfcuE4NU3SI'></script>
+    <script type='text/javascript'>
+
+        function loadMapScenario() {
+            var locations = [
+                { latitude: 47.6062, longitude: -122.3321, title: 'Location 1' }
+            ];
+            var map = new Microsoft.Maps.Map('#myMap', {
+                credentials: 'Au3LSzanBLGwhJ0mu3GmwWd-L1UDsSk7iC5QMczU8NxRYIjWJYFBSEfcuE4NU3SI'
+            });
+            $.ajax(
+                {
+                    url: "../php/get_ambulance_location.php",
+                    dataType: "json",
+                    success: function (data) {
+                        //data = JSON.parse(data);
+                        window.localStorage.setItem('temp_data', JSON.stringify(data));
+                        let data3 = JSON.parse(window.localStorage.getItem('temp_data'));
+                        var count = data3.count;
+                        var da = "";
+                        for (var i = 0; i < count; i++) {
+                            var data4 = {
+                                latitude: data3[i].lat,
+                                longitude: data3[i].long,
+                                title: "Ambulance Number: " + data3[i].van_number
+                            };
+                            locations.push(data4);
+                        }
+                        for (var i = 0; i < locations.length; i++) {
+                            var pushpin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(locations[i].latitude, locations[i].longitude), { title: locations[i].title });
+                            map.entities.push(pushpin);
+                        }
+                    },
+                    error: function (e) {
+                        alert('Error in putting data at     : ' + JSON.stringify(e));
+                        console.log("stcks=" + JSON.stringify(e));
+                    }
+                });
+            // Define the locations
+
+
+            // Add pushpins to the map for each location
+
+        }
+    </script>
 </head>
 
-<style>
-    /* Set the height of the map */
-    #map {
-        height: 650px;
-        width: 100%;
-    }
-</style>
-</head>
-
-<h1>Ambulance Location</h1>
-<div id="map"></div>
-<script>
-    function initMap() {
-        // Set the initial location of the map to the ambulance's location
-        var ambulanceLocation = { lat: 37.7749, lng: -122.4194 }; // set the lat, lng for ambulance location
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12, // Set the initial zoom level of the map
-            center: ambulanceLocation // Set the center of the map to the ambulance's location
-        });
-
-        // Add a marker to the ambulance's location on the map
-        var marker = new google.maps.Marker({
-            position: ambulanceLocation,
-            map: map,
-            title: "Ambulance"
-        });
-    }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-</script>
+<body onload="loadMapScenario();">
+    <div id='myMap' style='width: 100vw; height: 80vh;'></div>
 </body>
+
+</html>

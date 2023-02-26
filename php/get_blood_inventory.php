@@ -25,3 +25,4 @@ echo $blood;
 echo $hospital;
 echo "<script> localStorage.setItem('blood_inventory', `" . $blood . "`);</script>";
 echo "<script> localStorage.setItem('hospital_blood_distribution', `" . $hospital . "`);</script>";
+echo '<script>window.onload = (event) => {location.replace("../html/predict_blood_requirements.html")};</script>';
