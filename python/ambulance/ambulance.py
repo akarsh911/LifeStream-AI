@@ -4,8 +4,8 @@ import json
 import random
 import csv
 
-patiala_lat = 30.3398
-patiala_lon = 76.3869
+patiala_lat = 25.4358
+patiala_lon = 81.8463
 
 num_samples = 1000 
 accident_locations = []
