@@ -2,7 +2,7 @@ let data3 = JSON.parse(window.localStorage.getItem('user_data'));
 if (data3 != null) {
     var user = data3.user_type;
     console.log(data3);
-    if (user == 0) {
+    if (user == 4) {
         document.getElementById("pbr").style.display = "none";
         document.getElementById("doc").style.display = "none";
         document.getElementById("pbr").style.display = "none";
